@@ -20,7 +20,7 @@ use netsim::spawn;
 use tokio_core::reactor::Core;
 use get_if_addrs::get_if_addrs;
 
-// First, check that there is more than one network interface. This will generally be true
+// First, check that there is at least one network interface. This will generally be true
 // since there will at least be the loopback interface.
 let interfaces = get_if_addrs().unwrap();
 assert!(interfaces.len() > 0);
